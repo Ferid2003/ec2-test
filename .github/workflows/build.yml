@@ -32,4 +32,4 @@ jobs:
           aws-region: us-east-1
 
       - name: Upload JAR to S3
-        run: aws s3 cp web-app/build/libs/*.jar s3://${{ env.ARTIFACT_BUCKET }}/
+        run: aws s3 cp web-app/build/libs/*.jar s3://${{ secrets.ARTIFACT_BUCKET }}/
