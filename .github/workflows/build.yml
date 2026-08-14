@@ -6,7 +6,6 @@ on:
 
 env:
   AWS_REGION: us-east-1 # TODO: edit to your target AWS region
-  ARTIFACT_BUCKET: YOUR_ARTIFACT_BUCKET_NAME # TODO: edit to your S3 bucket name
 
 jobs:
   build:
