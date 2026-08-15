@@ -48,4 +48,4 @@ to `main` and uploads it to S3. Before using it, edit the placeholders:
 - `env.ARTIFACT_BUCKET` — set to your actual S3 bucket name
 
 It also expects `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` to be
-configured as GitHub Actions secrets on the repository.
+configured as GitHub Actions secrets on the repository..
