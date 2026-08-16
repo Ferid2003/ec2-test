@@ -12,8 +12,17 @@ availability zone it's running in, via the EC2 Instance Metadata Service
   code.
 - **`web-app`** — Spring Boot 3.3 web application (Java 17). Exposes a
   `GET /region` endpoint that queries the EC2 metadata service for the
-  current availability zone and derives the region from it. Depends on
-  `shared-lib`.
+  current availability zone and derives the region from it, plus a set of
+  `/images` endpoints for storing and retrieving images on local disk
+  (directory configurable via `images.dir`, default `./images-data`):
+  - `POST /images` (multipart `file`) — upload an image
+  - `GET /images/{name}` — download an image
+  - `GET /images/{name}/metadata` — metadata (last update date, name, size
+    in bytes, extension) for one image
+  - `GET /images/random/metadata` — metadata for a random image
+  - `DELETE /images/{name}` — delete an image
+
+  Depends on `shared-lib`.
 
 ## Build locally
 
